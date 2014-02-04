@@ -157,6 +157,6 @@ $request->confirmDelivery($translationIds);
 
 ## Beispielimplementierung
 
-Die EuleoRequest-Klasse und eine Beispielimplementierung finden Sie unter: [hier](https://github.com/euleogmbh/euleocms_api)
+Die EuleoRequest-Klasse und eine Beispielimplementierung finden Sie [hier](https://github.com/euleogmbh/euleocms_api).
 
-Die Dokumentation der Klasse EuleoRequest finden Sie unter [hier](EuleoRequest.md)
+Die Dokumentation der Klasse EuleoRequest finden Sie [hier](EuleoRequest.md).

@@ -9,6 +9,7 @@ Es gibt Zeilen (rows) und Felder (fields). Zeilen k&ouml;nnen mehrere Felder sow
 Z.B. eine Seite mit Titel und Keywords sowie einem Inhalt mit Richtext:
 
 ```
+<?php
 $row = array();
 $row['code'] = 'seiten_1'; // Eindeutiger Identifikator
 $row['title'] = 'Seite 1'; // Titel der Zeile.
@@ -42,6 +43,7 @@ $field['value'] = '<ul><li>123</li><li>2</li></ul>';
 $subrow['fields']['text'] = $field;
 
 $row['rows'][] = $subrow;
+?>
 ```
 
 Optional kann bei der Zeile ein Link ("link") mitgegeben werden. Dieser wird dem &Uuml;bersetzer angezeigt.
@@ -154,6 +156,14 @@ Zum Abschluss m&uuml;ssen Eintr&auml;ge mit dem Flag "ready" = 1 als abgeholt ma
 $translationIds = array(1, 2, 3);
 $request->confirmDelivery($translationIds);
 ```
+
+## Sandbox
+
+Es gibt im Euleo-System eine Sandbox. Diese ist in der EuleoRequest-Klasse standardmäßig aktiviert.
+
+Zeilen, die gesendet werden, werden beim Abholen mit getRows() unverändert zurückgeliefert. confirmDelivery() löscht die Zeile.
+
+Zum Deaktivieren der Sandbox muss in der Klasse EuleoRequest die Eigenschaft $sandbox auf false gesetzt werden.
 
 ## Beispielimplementierung
 
